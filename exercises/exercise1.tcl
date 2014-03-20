@@ -58,13 +58,13 @@ $cbr set random_ false
 set cbr2 [new Application/Traffic/CBR]
 $cbr2 attach-agent $udp2
 $cbr2 set packetSize_ 1500
-$cbr2 set rate_ 10Mb
+$cbr2 set rate_ 5Mb
 $cbr2 set random_ false
 
 $ns at 0.1 "$cbr start"
-$ns at 124.5 "$cbr stop"
+$ns at 10.1 "$cbr stop"
 $ns at 0.1 "$cbr2 start"
-$ns at 124.5 "$cbr2 stop"
+$ns at 10.1 "$cbr2 stop"
 
 
 $ns run
