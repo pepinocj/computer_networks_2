@@ -8,15 +8,15 @@ out = open(sys.argv[4], 'w+')
 
 while True:
 	try:
-		l1 = f1.readline().split(" ")
+		l1 = f1.readline().strip().split(" ")
 		print(l1)
-		l2 = f2.readline().split(" ")
+		l2 = f2.readline().strip().split(" ")
 		print(l2)
-		l3 = f3.readline().split(" ")
+		l3 = f3.readline().strip().split(" ")
 		print(l3)
 		string = l1[0] + " " + l1[1] + " " + l2[1] + " " + l3[1]
 		out.write(string + "\n")
-	except IOError:
+	except IndexError:
 		break
 
 f1.close()
