@@ -17,15 +17,6 @@ proc finish {} {
 	exit 0
 }
 
-proc random_sorted_tuple {range} {
-    array set tuple {}
-    tuple(1) = eval {range * rand()}
-    tuple(2) = eval {range * rand()}
-    
-    return lsort tuple
-}
-
-
 array set lan_nodes {}
 set lan_router [$ns node]
 set modem_uplink [$ns node]
