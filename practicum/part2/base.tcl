@@ -20,9 +20,10 @@ proc finish {} {
 
 
 array set lan_nodes {}
+array set internet_nodes {}
 set router [$ns node]
 set modem [$ns node]
-array set internet_nodes {}
+
 
 for {set i 0} {$i < 2} {incr i} {
 	set lan_nodes($i) [$ns node]
@@ -79,19 +80,28 @@ $time_svar set avg_ 0.05
 $time_svar use-rng $rng2
 # We now define the beginning times of transfers and the transfer sizes
 
+#pg90 and 54
+
+# Number of sources
+set NodeNb 3
+# Number of flows per source node
+set NumberFlows 40
+
 # Arrivals of sessions follow a Poisson process.
+# set the beginning time of next transfer from source and attributes
+# update the number of flows
 for {set i 1} {$i <=$NodeNb} {incr i } {
     set t [$ns now]
     for {set j 1} {$j<=$NumberFlows} {incr j } {
-	# set the beginning time of next transfer from source and attributes
-	set t [expr $t + [$RV value]]
+        set addedTime [$time_svar value]
+	set t [expr $t + $addedTime]
+        set tcpsrc($i,$j) [new Agent/TCP/Newreno]
 	$tcpsrc($i,$j) set starts $t
 	$tcpsrc($i,$j) set sess $j
 	$tcpsrc($i,$j) set node $i
-	$tcpsrc($i,$j) set size [expr [$RVSize value]]
+	$tcpsrc($i,$j) set size [expr [$size_svar value]]
 	$ns at [$tcpsrc($i,$j) set starts] "$ftp($i,$j) send [$tcpsrc($i,$j) set size]"
-	# update the number of flows
-	$ns at [$tcpsrc($i,$j) set starts] " countFlows $i 1"
+	$ns at [$tcpsrc($i,$j) set starts] "countFlows $i 1"
     }
 }
 
