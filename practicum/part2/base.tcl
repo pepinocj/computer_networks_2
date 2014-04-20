@@ -86,6 +86,25 @@ $time_svar use-rng $rng2
 set NodeNb 3
 # Number of flows per source node
 set NumberFlows 40
+# TCP Sources , destinations , connections
+for { set i 1} { $i <= $NodeNb } { incr i } {
+	for { set j 1} { $j <= $NumberFlows } { incr j } {
+		set tcpsrc($i,$j) [ new Agent / TCP / Newreno ]
+		set tcp_snk($i,$j) [ new Agent / TCPSink ]
+		set k [expr $i * $NumberFlows + $j];
+		$tcpsrc($i,$j) set fid_ $k
+		$tcpsrc($i,$j) set window_ 2000
+		$ns attach-agent $internet_nodes(1) $tcp_snk($i,$j)
+		$ns attach-agent $lan_nodes(1) $tcpsrc($i,$j)
+		$ns connect $tcpsrc($i,$j) $tcp_snk($i,$j)
+		set ftp_array($i,$j) [new Application/FTP]
+
+		$ftp_array($i,$j) set type_ FTP
+
+		$ftp_array($i,$j) attach-agent $tcpsrc($i,$j) 
+		} 
+	}
+
 
 # Arrivals of sessions follow a Poisson process.
 # set the beginning time of next transfer from source and attributes
@@ -100,8 +119,8 @@ for {set i 1} {$i <=$NodeNb} {incr i } {
 	$tcpsrc($i,$j) set sess $j
 	$tcpsrc($i,$j) set node $i
 	$tcpsrc($i,$j) set size [expr [$size_svar value]]
-	$ns at [$tcpsrc($i,$j) set starts] "$ftp($i,$j) send [$tcpsrc($i,$j) set size]"
-	$ns at [$tcpsrc($i,$j) set starts] "countFlows $i 1"
+	$ns at [$tcpsrc($i,$j) set starts] "$ftp_array($i,$j) send [$tcpsrc($i,$j) set size]"
+#	$ns at [$tcpsrc($i,$j) set starts] "countFlows $i 1"
     }
 }
 
