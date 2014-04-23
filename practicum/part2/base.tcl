@@ -107,7 +107,7 @@ for { set i 1} { $i <= $NodeNb } { incr i } {
 	}
 
 
-
+#doodoocaca
 # Arrivals of sessions follow a Poisson process.
 # set the beginning time of next transfer from source and attributes
 # update the number of flows
