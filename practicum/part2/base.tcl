@@ -5,9 +5,14 @@ set ns [new Simulator]
 set tf [open simplified.tr w]
 $ns trace-all $tf
 
+#log file
+set logger [open logger.tr w]
+
 #nam tracefile
 set nf [open simplified.nam w]
 $ns namtrace-all $nf
+
+
 
 proc finish {} {
 	#finalize trace files
@@ -89,44 +94,48 @@ set NumberFlows 40
 # TCP Sources , destinations , connections
 for { set i 1} { $i <= $NodeNb } { incr i } {
 	for { set j 1} { $j <= $NumberFlows } { incr j } {
-		set tcpsrc($i,$j) [ new Agent / TCP / Newreno ]
-		set tcp_snk($i,$j) [ new Agent / TCPSink ]
+		set tcpsrc($i,$j) [new Agent/TCP/Newreno]
+		set tcp_snk($i,$j) [new Agent/TCPSink]
 		set k [expr $i * $NumberFlows + $j];
 		$tcpsrc($i,$j) set fid_ $k
 		$tcpsrc($i,$j) set window_ 2000
 		$ns attach-agent $internet_nodes(1) $tcp_snk($i,$j)
 		$ns attach-agent $lan_nodes(1) $tcpsrc($i,$j)
 		$ns connect $tcpsrc($i,$j) $tcp_snk($i,$j)
-		set ftp_array($i,$j) [new Application/FTP]
-
-		$ftp_array($i,$j) set type_ FTP
-
-		$ftp_array($i,$j) attach-agent $tcpsrc($i,$j) 
+		set ftp_array($i,$j) [$tcpsrc($i,$j) attach-source FTP]
 		} 
 	}
+
 
 
 # Arrivals of sessions follow a Poisson process.
 # set the beginning time of next transfer from source and attributes
 # update the number of flows
 for {set i 1} {$i <=$NodeNb} {incr i } {
-    set t [$ns now]
+    set t [expr $i * 5.0]
     for {set j 1} {$j<=$NumberFlows} {incr j } {
+	set size [expr [$size_svar value]]
+	$ns at $t "$ftp_array($i,$j) send $size"
         set addedTime [$time_svar value]
 	set t [expr $t + $addedTime]
-        set tcpsrc($i,$j) [new Agent/TCP/Newreno]
-	$tcpsrc($i,$j) set starts $t
-	$tcpsrc($i,$j) set sess $j
-	$tcpsrc($i,$j) set node $i
-	$tcpsrc($i,$j) set size [expr [$size_svar value]]
-	$ns at [$tcpsrc($i,$j) set starts] "$ftp_array($i,$j) send [$tcpsrc($i,$j) set size]"
-#	$ns at [$tcpsrc($i,$j) set starts] "countFlows $i 1"
+	puts "$t"
     }
 }
 
+# Printing the window size
 
+proc printWindow {} {
+	global ns tcp_agent logger
+	set time 1
+	set now [ $ns now ]
+	set cwnd [ $tcp_agent set cwnd_ ]
+	set ssthresh [ $tcp_agent set ssthresh_ ]
+	puts $logger "$cwnd $ssthresh"
+	$ns at [expr $now + $time] "printWindow" 
+}
+
+$ns at 0.1 "printWindow"
 $ns at 0.1 "$ftp start"
 $ns at 9.9 "$ftp stop"
 $ns at 10.0 "finish"
-
 $ns run
