@@ -94,7 +94,7 @@ set NumberFlows 40
 # TCP Sources , destinations , connections
 for { set i 1} { $i <= $NodeNb } { incr i } {
 	for { set j 1} { $j <= $NumberFlows } { incr j } {
-		set tcpsrc($i,$j) [new Agent/TCP]
+		set tcpsrc($i,$j) [new Agent/TCP/Newreno]
 		set tcp_snk($i,$j) [new Agent/TCPSink]
 		set k [expr $i * $NumberFlows + $j];
 		$tcpsrc($i,$j) set fid_ $k
