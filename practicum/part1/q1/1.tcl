@@ -18,6 +18,7 @@ proc finish {} {
 }
 
 set lan_nodes_0 [$ns node]
+$lan_nodes_0 label "oh hai"
 set lan_nodes_1 [$ns node]
 set lan_router [$ns node]
 set modem_uplink [$ns node]
