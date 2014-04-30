@@ -1,7 +1,7 @@
 set ns [new Simulator]
 
 #trace file
-set tf [open simplified.tr w]
+set tf [open /dev/stdout w]
 $ns trace-all $tf
 
 #nam tracefile
@@ -11,7 +11,7 @@ $ns namtrace-all $nf
 proc finish {} {
 	#finalize trace files
 	global ns nf tf
-	$ns flush-trace
+	# $ns flush-trace
 	close $tf
 	close $nf 
 	exit 0

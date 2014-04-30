@@ -2,7 +2,7 @@
 set ns [new Simulator]
 
 #trace file
-set tf [open simplified.tr w]
+set tf [open /dev/stdout w]
 $ns trace-all $tf
 
 #log file

@@ -1,0 +1,41 @@
+
+\documentclass[10pt,a4paper]{article}
+
+% Om het totaal aantal pagina's te tellen
+\usepackage{lastpage}
+
+% Om de marges aan te passen
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+% Voor headers en footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{Giuseppe Callari and Xavier Go\'as Aguililla}
+\rhead{\thepage /\pageref{LastPage}}
+
+\lfoot{Assignment}
+\cfoot{Computer Networks}
+\rfoot{Network Simulation}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+\input{titlepage}
+
+\section{Exercise 1}
+\subsection{Question 1}
+\subsection{Question 2}
+\subsection{Question 3}
+\subsection{Question 4}
+\subsection{Question 5}
+\subsection{Question 6}
+
+\section{Exercise 2}
+\subsection{Question 1}
+\subsection{Question 2}
+\subsection{Question 3}
+\subsection{Question 4}
+
+\end{document}
