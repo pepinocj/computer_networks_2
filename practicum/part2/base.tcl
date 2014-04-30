@@ -136,5 +136,5 @@ proc printWindow {} {
 $ns at 0.1 "printWindow"
 $ns at 0.1 "$ftp start"
 $ns at 9.9 "$ftp stop"
-$ns at 10.0 "finish"
+$ns at 40 "finish"
 $ns run
