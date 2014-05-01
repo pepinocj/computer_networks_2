@@ -64,9 +64,22 @@ would run multiple upload connections at the same time.
 
 \subsection{Question 4}
 
-We can see in \ref{down_limited}
+We can see in figures \ref{fig:down_limited} and \ref{fig:up_limited} that
+both the bridled and unbridled connection show similar patterns but
+differ at the tail end of the speed drop from 3.0s on. At 6.0s the CBR
+upload is stopped, but not all packets have been transferred yet due
+to packet loss.
 
-We can see in \ref{up_limited}
+The connection layer ensures these lost packets still arrive at their
+destination. To do this, the TCP connection persists while not all
+packets have arrived at their destination. Looking at figure
+\ref{fig:up_limited}, we see that the TCP upstream connection persists
+longer in the situation with the limited bandwidth. The packets
+transferred while the connection persists take up a certain amount of
+bandwidth. Only around the 9.5 second mark are all the packets
+transferred, and in figure \ref{fig:down_limited} we can see that the FTP
+download is negatively affected by this transfer: the throughput is
+very low until the 9.5 second mark.
 
 \begin{figure}[p]
     \centering
@@ -83,7 +96,28 @@ We can see in \ref{up_limited}
 \end{figure}
 
 \subsection{Question 5}
+
+When we impose a fixed bitrate on the CBR connection, we ensure that
+this connection never takes more than its preallocated share of
+bandwidth. Thus, when we allocate a small percentage of the total
+connection bandwidth, we ensure that other connections on the same
+link will not suffer from greatly limited performance, since TCP will
+not allocate more bandwidth than this fixed rate. TCP can then
+dynamically allocate bandwidth to other connections.
+
+% observations from simulation %
+
 \subsection{Question 6}
+
+\subsubsection{Question 6-1}
+A naive response would be to say that we expect performance to stay
+the same, since we have ten times the bandwidth for ten times the
+users. In actuality, this is not true. Consider the output of a
+simulation we made for this scenario.
+
+We can clearly see that all transfers have very variable throughput.
+
+\subsubsection{Question 6-2}
 
 \section{Exercise 2}
 \subsection{Question 1}

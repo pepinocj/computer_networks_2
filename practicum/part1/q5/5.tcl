@@ -64,6 +64,7 @@ set ftp [new Application/FTP]
 $ftp set type_ FTP
 $ftp attach-agent $tcp_agent
 $ftp set window_ 80
+
 set cbr [new Application/Traffic/CBR]
 $cbr set type_ CBR
 $cbr attach-agent $udp_agent
