@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Arch Linux) (format=pdflatex 2014.3.18)  30 APR 2014 16:26
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Arch Linux) (format=pdflatex 2014.3.18)  1 MAY 2014 14:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -95,7 +95,11 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \f@ncyO@erf=\skip49
 \f@ncyO@olf=\skip50
 \f@ncyO@orf=\skip51
-) (./report.aux)
+) (./report.aux
+
+LaTeX Warning: Label `fig:awesome_image_2' multiply defined.
+
+)
 \openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
@@ -117,8 +121,7 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             install/macros/latex/contrib/pageslts.tds.zip
 (lastpage)             ! on input line 25.
-
-(/usr/share/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/share/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count91
 \scratchdimen=\dimen113
@@ -221,27 +224,42 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 File: ../part1/q1/plots/1.pdf Graphic file (type pdf)
 
 <use ../part1/q1/plots/1.pdf>
-Package pdftex.def Info: ../part1/q1/plots/1.pdf used on input line 33.
+Package pdftex.def Info: ../part1/q1/plots/1.pdf used on input line 39.
 (pdftex.def)             Requested size: 483.69687pt x 362.78268pt.
 
-<../part1/q4/plots/4.pdf, id=11, 642.4pt x 481.8pt>
-File: ../part1/q4/plots/4.pdf Graphic file (type pdf)
+<../part1/q2/plots/2.pdf, id=11, 642.4pt x 481.8pt>
+File: ../part1/q2/plots/2.pdf Graphic file (type pdf)
 
-<use ../part1/q4/plots/4.pdf>
-Package pdftex.def Info: ../part1/q4/plots/4.pdf used on input line 43.
+<use ../part1/q2/plots/2.pdf>
+Package pdftex.def Info: ../part1/q2/plots/2.pdf used on input line 51.
+(pdftex.def)             Requested size: 483.69687pt x 362.78268pt.
+
+<../part1/q4/plots/4-down.pdf, id=12, 642.4pt x 481.8pt>
+File: ../part1/q4/plots/4-down.pdf Graphic file (type pdf)
+
+<use ../part1/q4/plots/4-down.pdf>
+Package pdftex.def Info: ../part1/q4/plots/4-down.pdf used on input line 71.
+(pdftex.def)             Requested size: 483.69687pt x 362.78268pt.
+
+<../part1/q4/plots/4-up.pdf, id=13, 642.4pt x 481.8pt>
+File: ../part1/q4/plots/4-up.pdf Graphic file (type pdf)
+
+<use ../part1/q4/plots/4-up.pdf>
+Package pdftex.def Info: ../part1/q4/plots/4-up.pdf used on input line 78.
 (pdftex.def)             Requested size: 483.69687pt x 362.78268pt.
  
 AED: lastpage setting LastPage
-[1] [2 <../part1/q1/plots/1.pdf>] [3 <../part1/q4/plots/4.pdf>] (./report.aux)
+[1] [2 <../part1/q1/plots/1.pdf>] [3 <../part1/q2/plots/2.pdf>] [4 <../part1/q4
+/plots/4-down.pdf>] [5 <../part1/q4/plots/4-up.pdf>] (./report.aux)
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2137 strings out of 493308
- 29990 string characters out of 6143616
- 97207 words of memory out of 5000000
- 5589 multiletter control sequences out of 15000+600000
+ 2151 strings out of 493308
+ 30320 string characters out of 6143616
+ 99262 words of memory out of 5000000
+ 5600 multiletter control sequences out of 15000+600000
  7007 words of font info for 25 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,11n,43p,232b,240s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -250,10 +268,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mti12.pfb>
-Output written on report.pdf (4 pages, 84894 bytes).
+Output written on report.pdf (6 pages, 111791 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
+ 83 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
