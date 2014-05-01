@@ -161,7 +161,7 @@ connections. We observe the following:
 long-standing FTP connection at the 5.0, 10.0 and 15.0 second marks. 
 \item Throughput for the long-standing FTP connection increases once
 the two second mark after the start of each burst is passed.
-
+\item 
 \end{enumerate}
 
 \begin{figure}[p]

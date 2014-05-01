@@ -17,7 +17,7 @@ proc finish {} {
 	exit 0
 }
 
-set n 10
+set n 50
 array set lan_nodes {}
 set lan_router [$ns node]
 set modem_uplink [$ns node]

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Arch Linux) (format=pdflatex 2014.3.18)  1 MAY 2014 16:56
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Arch Linux) (format=pdflatex 2014.3.18)  1 MAY 2014 22:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -235,37 +235,47 @@ Package pdftex.def Info: ../part1/q2/plots/2.pdf used on input line 51.
 File: ../part1/q4/plots/4-down.pdf Graphic file (type pdf)
 
 <use ../part1/q4/plots/4-down.pdf>
-Package pdftex.def Info: ../part1/q4/plots/4-down.pdf used on input line 86.
+Package pdftex.def Info: ../part1/q4/plots/4-down.pdf used on input line 87.
 (pdftex.def)             Requested size: 483.69687pt x 362.78268pt.
 
 <../part1/q4/plots/4-up.pdf, id=13, 642.4pt x 481.8pt>
 File: ../part1/q4/plots/4-up.pdf Graphic file (type pdf)
 
 <use ../part1/q4/plots/4-up.pdf>
-Package pdftex.def Info: ../part1/q4/plots/4-up.pdf used on input line 93.
+Package pdftex.def Info: ../part1/q4/plots/4-up.pdf used on input line 94.
+(pdftex.def)             Requested size: 483.69687pt x 362.78268pt.
+ [1] [2 <../part1/q1/plots/1.pdf>] [3 <../part1/q2/plots/2.pdf>] [4 <../part1/q
+4/plots/4-down.pdf>] [5 <../part1/q4/plots/4-up.pdf>] <../part2/q1/plots/1.pdf,
+ id=67, 642.4pt x 481.8pt>
+File: ../part2/q1/plots/1.pdf Graphic file (type pdf)
+
+<use ../part2/q1/plots/1.pdf>
+Package pdftex.def Info: ../part2/q1/plots/1.pdf used on input line 156.
 (pdftex.def)             Requested size: 483.69687pt x 362.78268pt.
  
 AED: lastpage setting LastPage
-[1] [2 <../part1/q1/plots/1.pdf>] [3 <../part1/q2/plots/2.pdf>] [4 <../part1/q4
-/plots/4-down.pdf>] [5 <../part1/q4/plots/4-up.pdf>] (./report.aux) ) 
+[6] [7 <../part2/q1/plots/1.pdf>] (./report.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2152 strings out of 493308
- 30320 string characters out of 6143616
- 100231 words of memory out of 5000000
- 5600 multiletter control sequences out of 15000+600000
+ 2158 strings out of 493308
+ 30472 string characters out of 6143616
+ 102231 words of memory out of 5000000
+ 5605 multiletter control sequences out of 15000+600000
  7315 words of font info for 26 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,11n,43p,232b,240s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/shar
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
-usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on report.pdf (6 pages, 124631 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on report.pdf (8 pages, 139970 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
+ 105 PDF objects out of 1000 (max. 8388607)
+ 73 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
