@@ -171,7 +171,11 @@ generally be better than if all activities are performed all at the same
 time. The reason for this is that any given point in time, there will
 be less than ten users performing the same activity simultaneously (at
 least, the probability of this scenario is overwhelmingly greater than
-the converse case). 
+the converse case) and thus less users sharing the same link
+bandwidth. On the other hand, if an activity (or multiple activities)
+starts while another activity is being performed, TCP will start
+throttling all activities. This will cause performance to be hindered
+at this point for the other activities.
 
 
 \section{Exercise 2}
@@ -183,10 +187,27 @@ connections. We observe the following:
 
 \begin{enumerate}
 \item We can clearly see sharp drops in throughput for the
-long-standing FTP connection at the 5.0, 10.0 and 15.0 second marks. 
-\item Throughput for the long-standing FTP connection increases once
-the two second mark after the start of each burst is passed.
-\item 
+  long-standing FTP connection at the 5.0, 10.0 and 15.0 second marks,
+  when the FTP bursts begin. This follows from TCP Tahoe's congestion
+  control algorithm: the additional burst traffic causes the bandwidth
+  to be exceeded, resulting in packet loss. The TCP congestion control
+  algorithm will then reduce the congestion window size to a minimum
+  and build up again. Still, both connections must share the
+  same bandwidth, so the throughput after one of the requests is
+  acknowledged will be slower. This is repeated forty times in a span
+  of two seconds, resulting in forty throttlings of the transfer speed.
+\item The burst traffic throughput reaches a maximum at the end of the
+  burst, while the long-standing traffic throughput starts increasing at this
+  point and return to a maximum just before the next burst starts. The
+  sizes of the files requested by HTTP is not too large, so most
+  transfers will be done by this point. Accordingly, the throughput of
+  the long-standing connection will slowly increase again, until the
+  next burst arrives, packet loss occurs, and the cycle begins anew.
+\item Note that he last burst causes a remarkably long drop in
+  throughput in the long-standing FTP connection. We believe that this
+  is due to the file sizes generated for the last FTP burst, which we
+  believe are larger on average than for the other two bursts (as we
+  saw in the FTP request logs).
 \end{enumerate}
 
 \begin{figure}[p]
@@ -263,6 +284,7 @@ congestion window size drops to 1. From here on, it displays the same
 behavior as Tahoe until before the 20s mark, when packet loss occurs.
 The window size at this point is around 25; accordingly, the next
 window size will be 12, and the threshold is also set to this value.
+
 \begin{figure}[p]
     \centering
     \includegraphics[width=\textwidth]{../part2/q4/plots/algorithm.pdf}
