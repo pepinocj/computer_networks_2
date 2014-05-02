@@ -7,6 +7,7 @@ $ns trace-all $tf
 
 #log file
 set logger [open logger.tr w]
+set filelogger [open files.tr w]
 
 #nam tracefile
 set nf [open simplified.nam w]
@@ -45,7 +46,7 @@ for {set i 0} {$i < 2} {incr i} {
 
 
 # TCP connection, KUL server is agent, node 1 is sink
-set tcp_agent [new Agent/TCP]
+set tcp_agent [new Agent/TCP/Reno]
 $tcp_agent set fid_ 1
 $tcp_agent set window_ 80
 set tcp_sink [new Agent/TCPSink]
@@ -94,13 +95,13 @@ set NumberFlows 40
 # TCP Sources , destinations , connections
 for { set i 1} { $i <= $NodeNb } { incr i } {
 	for { set j 1} { $j <= $NumberFlows } { incr j } {
-		set tcpsrc($i,$j) [new Agent/TCP/Newreno]
+		set tcpsrc($i,$j) [new Agent/TCP]
 		set tcp_snk($i,$j) [new Agent/TCPSink]
 		set k [expr $i * $NumberFlows + $j];
 		$tcpsrc($i,$j) set fid_ $k
 		$tcpsrc($i,$j) set window_ 2000
-		$ns attach-agent $internet_nodes(1) $tcp_snk($i,$j)
-		$ns attach-agent $lan_nodes(1) $tcpsrc($i,$j)
+		$ns attach-agent $lan_nodes(1) $tcp_snk($i,$j)
+		$ns attach-agent $internet_nodes(1) $tcpsrc($i,$j)
 		$ns connect $tcpsrc($i,$j) $tcp_snk($i,$j)
 		set ftp_array($i,$j) [$tcpsrc($i,$j) attach-source FTP]
 		} 
@@ -114,6 +115,7 @@ for {set i 1} {$i <=$NodeNb} {incr i } {
     set t [expr $i * 5.0]
     for {set j 1} {$j<=$NumberFlows} {incr j } {
 	set size [expr [$size_svar value]]
+	puts $filelogger "$i-$j $t $size"
 	$ns at $t "$ftp_array($i,$j) send $size"
         set addedTime [$time_svar value]
 	set t [expr $t + $addedTime]
@@ -125,16 +127,16 @@ for {set i 1} {$i <=$NodeNb} {incr i } {
 
 proc printWindow {} {
 	global ns tcp_agent logger
-	set time 1
+	set time 0.001
 	set now [ $ns now ]
 	set cwnd [ $tcp_agent set cwnd_ ]
 	set ssthresh [ $tcp_agent set ssthresh_ ]
-	puts $logger "$cwnd $ssthresh"
+	puts $logger "$now $cwnd $ssthresh"
 	$ns at [expr $now + $time] "printWindow" 
 }
 
 $ns at 0.1 "printWindow"
 $ns at 0.1 "$ftp start"
-$ns at 9.9 "$ftp stop"
-$ns at 10.0 "finish"
+$ns at 40.0 "$ftp stop"
+$ns at 40.0 "finish"
 $ns run

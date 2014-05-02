@@ -1,0 +1,26 @@
+\contentsline {section}{\numberline {1}Exercise 1}{2}
+\contentsline {subsection}{\numberline {1.1}Question 1 and 2}{2}
+\contentsline {subsection}{\numberline {1.2}Question 3}{2}
+\contentsline {subsection}{\numberline {1.3}Question 4}{2}
+\contentsline {subsection}{\numberline {1.4}Question 5}{2}
+\contentsline {subsection}{\numberline {1.5}Question 6}{2}
+\contentsline {subsubsection}{\numberline {1.5.1}Question 6-1}{2}
+\contentsline {subsubsection}{\numberline {1.5.2}Question 6-2}{7}
+\contentsline {section}{\numberline {2}Exercise 2}{7}
+\contentsline {subsection}{\numberline {2.1}Question 1}{7}
+\contentsline {subsection}{\numberline {2.2}Questions 2 and 3}{7}
+\contentsline {subsection}{\numberline {2.3}Question 4}{10}
+\contentsline {section}{\numberline {3}Source code listings}{12}
+\contentsline {subsection}{\numberline {3.1}Base setups}{12}
+\contentsline {subsubsection}{\numberline {3.1.1}Exercise 1}{12}
+\contentsline {subsubsection}{\numberline {3.1.2}Exercise 2}{13}
+\contentsline {subsection}{\numberline {3.2}Exercises}{15}
+\contentsline {subsubsection}{\numberline {3.2.1}Exercise 1.1}{15}
+\contentsline {subsubsection}{\numberline {3.2.2}Exercise 1.2}{16}
+\contentsline {subsubsection}{\numberline {3.2.3}Exercise 1.3}{18}
+\contentsline {subsubsection}{\numberline {3.2.4}Exercise 1.4}{19}
+\contentsline {subsubsection}{\numberline {3.2.5}Exercise 1.5}{20}
+\contentsline {subsubsection}{\numberline {3.2.6}Exercise 1.6.1a}{22}
+\contentsline {subsubsection}{\numberline {3.2.7}Exercise 1.6.1b}{23}
+\contentsline {subsubsection}{\numberline {3.2.8}Exercise 1.6.2}{25}
+\contentsline {subsubsection}{\numberline {3.2.9}Exercise 2.4}{27}

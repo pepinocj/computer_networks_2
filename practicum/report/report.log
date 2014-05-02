@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Arch Linux) (format=pdflatex 2014.3.18)  1 MAY 2014 22:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Arch Linux) (format=pdflatex 2014.3.18)  2 MAY 2014 14:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -58,6 +58,31 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
+(/usr/share/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count88
+\lst@gtempboxa=\box26
+\lst@token=\toks15
+\lst@length=\count89
+\lst@currlwidth=\dimen105
+\lst@column=\count90
+\lst@pos=\count91
+\lst@lostspace=\dimen106
+\lst@width=\dimen107
+\lst@newlines=\count92
+\lst@lineno=\count93
+\lst@maxwidth=\dimen108
+
+(/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
+\c@lstnumber=\count94
+\lst@skipnumbers=\count95
+\lst@framebox=\box27
+)
+(/usr/share/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2013/08/26 1.5b listings configuration
+))
+Package: listings 2013/08/26 1.5b (Carsten Heinz)
+
 (/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
@@ -72,18 +97,18 @@ Package ifvtex Info: VTeX not detected.
 (/usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count88
-\Gm@cntv=\count89
-\c@Gm@tempcnt=\count90
-\Gm@bindingoffset=\dimen105
-\Gm@wd@mp=\dimen106
-\Gm@odd@mp=\dimen107
-\Gm@even@mp=\dimen108
-\Gm@layoutwidth=\dimen109
-\Gm@layoutheight=\dimen110
-\Gm@layouthoffset=\dimen111
-\Gm@layoutvoffset=\dimen112
-\Gm@dimlist=\toks15
+\Gm@cnth=\count96
+\Gm@cntv=\count97
+\c@Gm@tempcnt=\count98
+\Gm@bindingoffset=\dimen109
+\Gm@wd@mp=\dimen110
+\Gm@odd@mp=\dimen111
+\Gm@even@mp=\dimen112
+\Gm@layoutwidth=\dimen113
+\Gm@layoutheight=\dimen114
+\Gm@layouthoffset=\dimen115
+\Gm@layoutvoffset=\dimen116
+\Gm@dimlist=\toks16
 )
 (/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip43
@@ -120,17 +145,17 @@ Package lastpage Info: Please have a look at the pageslts package at
 
 (/usr/share/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count91
-\scratchdimen=\dimen113
-\scratchbox=\box26
-\nofMPsegments=\count92
-\nofMParguments=\count93
-\everyMPshowfont=\toks16
-\MPscratchCnt=\count94
-\MPscratchDim=\dimen114
-\MPnumerator=\count95
-\makeMPintoPDFobject=\count96
-\everyMPtoPDFconversion=\toks17
+\scratchcounter=\count99
+\scratchdimen=\dimen117
+\scratchbox=\box28
+\nofMPsegments=\count100
+\nofMParguments=\count101
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count102
+\MPscratchDim=\dimen118
+\MPnumerator=\count103
+\makeMPintoPDFobject=\count104
+\everyMPtoPDFconversion=\toks18
 ) (/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -175,6 +200,8 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+\c@lstlisting=\count105
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -217,65 +244,130 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
-<../part1/q1/plots/1.pdf, id=10, 642.4pt x 481.8pt>
+(./report.toc)
+\tf@toc=\write3
+\openout3 = `report.toc'.
+
+ [1] <../part1/q1/plots/1.pdf, id=15, 642.4pt x 481.8pt>
 File: ../part1/q1/plots/1.pdf Graphic file (type pdf)
 
 <use ../part1/q1/plots/1.pdf>
-Package pdftex.def Info: ../part1/q1/plots/1.pdf used on input line 39.
+Package pdftex.def Info: ../part1/q1/plots/1.pdf used on input line 63.
 (pdftex.def)             Requested size: 483.69687pt x 362.78268pt.
 
-<../part1/q2/plots/2.pdf, id=11, 642.4pt x 481.8pt>
+<../part1/q2/plots/2.pdf, id=16, 642.4pt x 481.8pt>
 File: ../part1/q2/plots/2.pdf Graphic file (type pdf)
 
 <use ../part1/q2/plots/2.pdf>
-Package pdftex.def Info: ../part1/q2/plots/2.pdf used on input line 51.
+Package pdftex.def Info: ../part1/q2/plots/2.pdf used on input line 71.
 (pdftex.def)             Requested size: 483.69687pt x 362.78268pt.
 
-<../part1/q4/plots/4-down.pdf, id=12, 642.4pt x 481.8pt>
+<../part1/q4/plots/4-down.pdf, id=17, 642.4pt x 481.8pt>
 File: ../part1/q4/plots/4-down.pdf Graphic file (type pdf)
 
 <use ../part1/q4/plots/4-down.pdf>
-Package pdftex.def Info: ../part1/q4/plots/4-down.pdf used on input line 87.
+Package pdftex.def Info: ../part1/q4/plots/4-down.pdf used on input line 107.
 (pdftex.def)             Requested size: 483.69687pt x 362.78268pt.
 
-<../part1/q4/plots/4-up.pdf, id=13, 642.4pt x 481.8pt>
+<../part1/q4/plots/4-up.pdf, id=18, 642.4pt x 481.8pt>
 File: ../part1/q4/plots/4-up.pdf Graphic file (type pdf)
 
 <use ../part1/q4/plots/4-up.pdf>
-Package pdftex.def Info: ../part1/q4/plots/4-up.pdf used on input line 94.
+Package pdftex.def Info: ../part1/q4/plots/4-up.pdf used on input line 114.
 (pdftex.def)             Requested size: 483.69687pt x 362.78268pt.
- [1] [2 <../part1/q1/plots/1.pdf>] [3 <../part1/q2/plots/2.pdf>] [4 <../part1/q
-4/plots/4-down.pdf>] [5 <../part1/q4/plots/4-up.pdf>] <../part2/q1/plots/1.pdf,
- id=67, 642.4pt x 481.8pt>
+ [2] [3 <../part1/q1/plots/1.pdf>] [4 <../part1/q2/plots/2.pdf>] [5 <../part1/q
+4/plots/4-down.pdf>] [6 <../part1/q4/plots/4-up.pdf>] <../part2/q1/plots/1.pdf,
+ id=72, 642.4pt x 481.8pt>
 File: ../part2/q1/plots/1.pdf Graphic file (type pdf)
 
 <use ../part2/q1/plots/1.pdf>
-Package pdftex.def Info: ../part2/q1/plots/1.pdf used on input line 156.
+Package pdftex.def Info: ../part2/q1/plots/1.pdf used on input line 191.
 (pdftex.def)             Requested size: 483.69687pt x 362.78268pt.
- 
+
+<../part2/q2/plots/algorithm.pdf, id=73, 642.4pt x 481.8pt>
+File: ../part2/q2/plots/algorithm.pdf Graphic file (type pdf)
+
+<use ../part2/q2/plots/algorithm.pdf>
+Package pdftex.def Info: ../part2/q2/plots/algorithm.pdf used on input line 239
+.
+(pdftex.def)             Requested size: 483.69687pt x 362.78268pt.
+ [7] [8 <../part2/q1/plots/1.pdf>]
+[9 <../part2/q2/plots/algorithm.pdf>]
+<../part2/q4/plots/algorithm.pdf, id=101, 642.4pt x 481.8pt>
+File: ../part2/q4/plots/algorithm.pdf Graphic file (type pdf)
+
+<use ../part2/q4/plots/algorithm.pdf>
+Package pdftex.def Info: ../part2/q4/plots/algorithm.pdf used on input line 265
+.
+(pdftex.def)             Requested size: 483.69687pt x 362.78268pt.
+ [10] [11 <../part2/q4/plots/algorithm.pdf>] (/usr/share/texmf-dist/tex/latex/l
+istings/lstlang1.sty
+File: lstlang1.sty 2013/08/26 1.5b listings language file
+)
+(/usr/share/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2013/08/26 1.5b listings language file
+)
+(/home/xavier/projects/computer_networks_2/practicum/part1/base.tcl
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 11.
+
+(/usr/share/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 11.
+ [12])
+(/home/xavier/projects/computer_networks_2/practicum/part2/base.tcl [13]
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 34.
+
+(/usr/share/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 34.
+ [14])
+(/home/xavier/projects/computer_networks_2/practicum/part1/q1/1.tcl [15])
+(/home/xavier/projects/computer_networks_2/practicum/part1/q2/2.tcl [16]
+[17]) (/home/xavier/projects/computer_networks_2/practicum/part1/q3/3.tcl
+[18]) (/home/xavier/projects/computer_networks_2/practicum/part1/q4/4.tcl
+[19]) (/home/xavier/projects/computer_networks_2/practicum/part1/q5/5.tcl
+[20] [21])
+(/home/xavier/projects/computer_networks_2/practicum/part1/q6/6-1a.tcl [22])
+(/home/xavier/projects/computer_networks_2/practicum/part1/q6/6-1b.tcl [23]
+[24]) (/home/xavier/projects/computer_networks_2/practicum/part1/q6/6-2.tcl
+[25] [26]
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 122.
+LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 122.
+) (/home/xavier/projects/computer_networks_2/practicum/part2/q4/4.tcl
+[27] [28] [29]) 
 AED: lastpage setting LastPage
-[6] [7 <../part2/q1/plots/1.pdf>] (./report.aux)
+[30] (./report.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 2158 strings out of 493308
- 30472 string characters out of 6143616
- 102231 words of memory out of 5000000
- 5605 multiletter control sequences out of 15000+600000
- 7315 words of font info for 26 fonts, out of 8000000 for 9000
+ 3879 strings out of 493308
+ 56400 string characters out of 6143616
+ 176891 words of memory out of 5000000
+ 7254 multiletter control sequences out of 15000+600000
+ 8014 words of font info for 28 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,11n,43p,232b,240s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,12n,43p,239b,1720s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on report.pdf (8 pages, 139970 bytes).
+ic/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
+r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmti12.pfb>
+Output written on report.pdf (31 pages, 395484 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
- 73 compressed objects within 1 object stream
+ 215 PDF objects out of 1000 (max. 8388607)
+ 149 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -127,7 +127,7 @@ for {set i 1} {$i <=$NodeNb} {incr i } {
 
 proc printWindow {} {
 	global ns tcp_agent logger
-	set time 0.01
+	set time 0.001
 	set now [ $ns now ]
 	set cwnd [ $tcp_agent set cwnd_ ]
 	set ssthresh [ $tcp_agent set ssthresh_ ]
